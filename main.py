@@ -56,7 +56,6 @@ def main(page: ft.Page):
         page.update()
     
     page.on_route_change = router  
-    page.go('/OTP') 
     page.go('/') 
     
 ft.app(target=(main),assets_dir='assets/')

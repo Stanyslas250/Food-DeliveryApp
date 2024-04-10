@@ -7,6 +7,7 @@ from PageView.loginView import *
 from PageView.signinView import *
 from PageView.homeView import *
 from components.OTP_view import *
+import test
 
 def main(page: ft.Page):
     
@@ -49,13 +50,19 @@ def main(page: ft.Page):
         
         if page.route == '/OTP':
             nextPage = OTP_view(page)
+            page.views.append(nextPage)
+            
         if page.route == '/Main':
             nextPage = Home(page)
+            page.views.append(nextPage)
+            
+        if page.route == '/test':
+            nextPage = test.Test(page)
             page.views.append(nextPage)
             
         page.update()
     
     page.on_route_change = router  
-    page.go('/') 
+    page.go('/OTP') 
     
 ft.app(target=(main),assets_dir='assets/')

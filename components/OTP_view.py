@@ -1,18 +1,18 @@
 from flet import *
-from PageView.signinView import Signup
-
-
-
-
+from Service import *
 
 class OTP_view(View):
     def __init__(self, page: Page):
-        super().__init__( 
+        super().__init__(
                         route='/OTP', horizontal_alignment="center",
-                        vertical_alignment="center",padding=20, bgcolor='#fd2345')
+                        vertical_alignment="center",padding=20, bgcolor='#121223')
         
         self.page = page
-        phone = 250
+        phone = 250     
+        
+        count = Text('',size=16,color='white')   
+        Resend_Btn = TextButton('Resend',disabled=True)
+        
         
         self.design = Container(
             Column(alignment=MainAxisAlignment.START,
@@ -29,16 +29,15 @@ class OTP_view(View):
                                 Row(alignment=MainAxisAlignment.SPACE_BETWEEN,
                                     controls=[
                                     Text('CODE',size=16,color='darkblue'),
-                                    Row([
-                                        TextButton('Resend',disabled=True),
-                                        Text('in 50sec')
-                                    ])
+                                    self.fonc
                                 ])
                             ])
                         )
             ])
         )
         
+            
+
         self.controls=[
             self.design
         ]

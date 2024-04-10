@@ -1,5 +1,5 @@
 from flet import *
-from Service.control import *
+from Service import *
 
 class OTP_view(View):
     def __init__(self, page: Page):
@@ -13,7 +13,7 @@ class OTP_view(View):
         count = Text('',size=16,color='white')   
         Resend_Btn = TextButton('Resend',disabled=True)
         
-        resend = btn_Resend(count,Resend_Btn)
+        #resend = btn_Resend(count,Resend_Btn)
         
         self.design = Container(
             Column(alignment=MainAxisAlignment.START,
@@ -30,7 +30,7 @@ class OTP_view(View):
                                 Row(alignment=MainAxisAlignment.SPACE_BETWEEN,
                                     controls=[
                                     Text('CODE',size=16,color='darkblue'),
-                                    resend
+                                   # resend
                                 ])
                             ])
                         )

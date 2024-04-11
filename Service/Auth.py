@@ -4,12 +4,12 @@ from flet import *
 from datetime import *
 
 config = {
-    "apiKey": "AIzaSyB7Z1S_rqs3mKel9HG2td-emPP_KdoO0es",
-    "authDomain": "foodie---food-delivery.firebaseapp.com",
-    "projectId": "foodie---food-delivery",
-    "storageBucket": "foodie---food-delivery.appspot.com",
-    "messagingSenderId": "312660170224",
-    "appId": "1:312660170224:web:afbcf58de4226d6627b935",
+    "apiKey": "AIzaSyBbxwOZpVhI6oSa-hplK1mcsHDst0qiZ2Q",
+    "authDomain": "foodie-app-25aed.firebaseapp.com",
+    "projectId": "foodie-app-25aed",
+    "storageBucket": "foodie-app-25aed.appspot.com",
+    "messagingSenderId": "26355075263",
+    "appId": "1:26355075263:web:0ae986db63b583e4e05e0a",
     "databaseURL": ""
     }
 
@@ -18,6 +18,7 @@ firebase = pyrebase.initialize_app(config)
 
 # set up authentification manager
 auth = firebase.auth()
+
 
 
 def restart_state(e):
@@ -59,7 +60,6 @@ def register_user(email:str,password:str):
             email=email,
             password=password
         ) 
-        
         return True  
         
     except Exception as e:

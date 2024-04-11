@@ -13,10 +13,7 @@ class OTP_view(View):
         count = Text('',size=16,color='white')   
         Resend_Btn = TextButton('Resend',disabled=True)
         
-<<<<<<< HEAD
         #resend = btn_Resend(count,Resend_Btn)
-=======
->>>>>>> c39049e5ae374a4a53814490a8a0a496a1c0669c
         
         self.design = Container(
             Column(alignment=MainAxisAlignment.START,
@@ -33,11 +30,6 @@ class OTP_view(View):
                                 Row(alignment=MainAxisAlignment.SPACE_BETWEEN,
                                     controls=[
                                     Text('CODE',size=16,color='darkblue'),
-<<<<<<< HEAD
-                                   # resend
-=======
-                                    self.fonc
->>>>>>> c39049e5ae374a4a53814490a8a0a496a1c0669c
                                 ])
                             ])
                         )

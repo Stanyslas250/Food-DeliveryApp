@@ -59,7 +59,6 @@ def register_user(email:str,password:str):
             email=email,
             password=password
         ) 
-        
         return True  
         
     except Exception as e:
